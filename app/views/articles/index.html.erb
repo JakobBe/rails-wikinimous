@@ -1,0 +1,13 @@
+<h1> Here are all the articles</h1>
+<p id="new_article"><%= link_to "Write a new article", new_article_path, :class => "link"%></p>
+
+<div class="list">
+  <ul>
+    <% @articles.each do |article|  %>
+    <li>
+      <h3><%= link_to article.title, article_path(article), :class => "link" %></h3>
+      <p><%= article.content %></p>
+    </li>
+    <% end  %>
+  </ul>
+</div>

@@ -1,0 +1,7 @@
+<%= link_to "Show all", root_path, :class => "link" %>
+<%= link_to "Update", edit_article_path(@article.id), :class => "link" %>
+<%= link_to "Delete", article_path(@article.id), method: :delete, :class => "link" %>
+
+<h2><%= @article.title %> </h2>
+
+<p><%= @article.content %> </p>
